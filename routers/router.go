@@ -18,6 +18,8 @@ func init() {
 	beego.Router("/category/:merchantid", &controllers.CategoryController{}, "get:GetAllMenuByMerchantId")
 	beego.Router("/category/:merchantid/:categoryid", &controllers.CategoryController{}, "put:UpdateCategoryByMerchantId")
 	beego.Router("/category/:merchantid/:categoryid", &controllers.CategoryController{}, "delete:DeleteCategoryByMerchantId")
+	beego.Router("/menus/:categoryid", &controllers.MenuController{}, "get:GetMenuByCategoryId")
+	beego.Router("/menu/:categoryid", &controllers.MenuController{}, "post:AddMenuByCategoryId")
 	beego.Router("/menu", &controllers.MenuController{})
 	beego.Router("/result", &controllers.ResultController{})
 }
